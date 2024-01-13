@@ -17,7 +17,7 @@
         "mocha": true
     },
     "rules": {
-        "no-console": 0,
+        "no-console": 1,
         "no-process-env": 1,
         "dot-location": 1,
         "no-invalid-this": 2,
