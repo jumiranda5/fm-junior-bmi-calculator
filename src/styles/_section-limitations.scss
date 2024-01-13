@@ -1,0 +1,50 @@
+@use 'variables' as v;
+
+/* =====================================
+                MOBILE
+======================================== */
+
+.section-limitations {
+    padding: 0 v.$page-padding;
+    margin-bottom: 4.5rem;
+}
+
+.curve-right { display: none; }
+
+.limitations-text {
+    text-align: center;
+}
+
+.limitations-text p {
+    margin-top: 2rem;
+}
+
+.limitations-cards {
+    display: grid;
+    gap: 1rem;
+    align-content: start;
+    margin-top: 3.5rem;
+}
+
+.limitations-cards p {
+    margin-top: 1rem;
+}
+
+.limitations-cards .card {
+    padding: 1.5rem;
+    box-shadow: v.$shadow;
+    border-radius: 1.5rem;
+    background-color: v.$clr-white;
+}
+
+.card-heading-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-heading-container img {
+    width: 2rem;
+    aspect-ratio: 1 / 1;
+}

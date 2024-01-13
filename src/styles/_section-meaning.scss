@@ -1,0 +1,45 @@
+@use 'variables' as v;
+
+/* =====================================
+                MOBILE
+======================================== */
+
+.section-meaning {
+    margin: 4.5rem 0;
+}
+
+.curve-left { display: none; }
+
+.meaning-result {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.meaning-result-text {
+    margin: 0 v.$page-padding;
+}
+
+.meaning-result-text h2 {
+    text-wrap: wrap;
+}
+
+.meaning-result-text p {
+    margin-top: 2rem;
+}
+
+.meaning-items {
+    display: grid;
+    gap: 2.5rem;
+    padding: 3.5rem v.$page-padding;
+    margin-top: 4.5rem;
+    background: v.$grad-lighter-blue;
+}
+
+.meaning-item-text {
+    margin-top: 2rem;
+}
+
+.meaning-item-text p {
+    margin-top: 1.5rem;
+}

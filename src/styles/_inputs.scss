@@ -1,0 +1,60 @@
+@use 'variables' as v;
+
+// RADIO Inputs
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    width: 1.9375rem;
+    height: 1.9375rem;
+    border: 1px solid v.$clr-borders;
+    border-radius: 100vw;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+
+input[type="radio"]:checked {
+    background-color: v.$clr-light-blue;
+}
+
+input[type="radio"]:not(:checked):hover {
+    border: 1px solid v.$clr-blue;
+}
+
+input[type="radio"]::before {
+    content: "";
+    width:  0.9375rem;
+    height:  0.9375rem;
+    border-radius: 100vw;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em v.$clr-blue;
+}
+
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
+
+// NUMERIC INPUTS
+
+.input-container input {
+    width: 100%;
+    padding: 1.125rem 1.5rem;
+    border: 1px solid v.$clr-borders;
+    border-radius: 0.75rem;
+    background-color: v.$clr-white;
+    outline: none;
+    line-height: 1;
+    
+}
+
+.input-container input::placeholder {
+    color: v.$clr-borders;
+}
+
+.input-container input:focus {
+    border: 2px solid v.$clr-blue;
+}

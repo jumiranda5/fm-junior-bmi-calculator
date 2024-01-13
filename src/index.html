@@ -8,9 +8,9 @@
 <body>
     <main>
 
-        <section class="section-calculator">
+        <section class="section-calculator grid">
 
-            <div class="calculator-info">
+            <div class="calculator-info grid-item">
                 <img src="" alt="Calculator Logo" id="logo" class="logo">
                 <div class="info-text-container">
                     <h1 class="heading-xl">Body Mass Index Calculator</h1>
@@ -23,7 +23,7 @@
                 </div>
             </div>
 
-            <form action="#" class="calculator-form">
+            <form action="#" class="calculator-form grid-item">
                 <h2 class="heading-m">Enter your details below</h2>
 
                 <!-- Radio group for measurement -->
@@ -45,7 +45,7 @@
                 <!-- Metric -->
 
                 <fieldset data-type="metric" class="fieldset-metric">
-                    <legend>Height</legend>
+                    <legend class="metric-legend">Height</legend>
                     <div class="input-container">
                         <label for="height-metric">cm</label>
                         <input type="text" inputmode="numeric" placeholder="0" name="height-metric" id="height-metric">
@@ -53,7 +53,7 @@
                 </fieldset>
 
                 <fieldset data-type="metric" class="fieldset-metric">
-                    <legend>Weight</legend>
+                    <legend class="metric-legend">Weight</legend>
                     <div class="input-container">
                         <label for="weight-metric">kg</label>
                         <input type="text" inputmode="numeric" placeholder="0" name="weight-metric" id="weight-metric">
@@ -63,29 +63,33 @@
                 <!-- Imperial -->
 
                 <fieldset data-type="imperial" class="fieldset-imperial">
-                    <legend>Height</legend>
+                    <legend class="metric-legend">Height</legend>
                     
-                    <div class="input-container">
-                        <label for="height-imperial-ft">ft</label>
-                        <input type="text" inputmode="numeric" placeholder="0" name="height-imperial-ft" id="height-imperial-ft">
-                    </div>
-                    
-                    <div class="input-container">
-                        <label for="height-imperial-in">in</label>
-                        <input type="text" inputmode="numeric" placeholder="0" name="height-imperial-in" id="height-imperial-in">
+                    <div class="imperial-container">
+                        <div class="input-container">
+                            <label for="height-imperial-ft">ft</label>
+                            <input type="text" inputmode="numeric" placeholder="0" name="height-imperial-ft" id="height-imperial-ft">
+                        </div>
+                        
+                        <div class="input-container">
+                            <label for="height-imperial-in">in</label>
+                            <input type="text" inputmode="numeric" placeholder="0" name="height-imperial-in" id="height-imperial-in">
+                        </div>
                     </div>
                 </fieldset>
 
                 <fieldset data-type="imperial" class="imperial">
-                    <legend>Weight</legend>
+                    <legend class="metric-legend">Weight</legend>
 
-                    <div class="input-container">
-                        <label for="weight-imperial-st">st</label>
-                        <input type="text" inputmode="numeric" placeholder="0" name="weight-imperial-st" id="weight-imperial-st">
-                    </div>
-                    <div class="input-container">
-                        <label for="weight-imperial-lbs">lbs</label>
-                        <input type="text" inputmode="numeric" placeholder="0" name="weight-imperial-lbs" id="weight-imperial-lbs">
+                    <div class="imperial-container">
+                        <div class="input-container">
+                            <label for="weight-imperial-st">st</label>
+                            <input type="text" inputmode="numeric" placeholder="0" name="weight-imperial-st" id="weight-imperial-st">
+                        </div>
+                        <div class="input-container">
+                            <label for="weight-imperial-lbs">lbs</label>
+                            <input type="text" inputmode="numeric" placeholder="0" name="weight-imperial-lbs" id="weight-imperial-lbs">
+                        </div>
                     </div>
                 </fieldset>
 
