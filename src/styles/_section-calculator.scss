@@ -26,7 +26,7 @@
 // INFO
 
 .calculator-info {
-    padding: 0 v.$page-padding 13.5rem;
+    padding: 0 var(--page-padding) 13.5rem;
     text-align: center;
     background: v.$grad-light-blue;
     border-radius: 0 0 2rem 2rem;
@@ -76,6 +76,12 @@
 
 // NUMERIC INPUTS
 
+.metric-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
 .metric-legend {
     margin-bottom: .5rem;
     font-size: .875rem;
@@ -110,15 +116,73 @@
 }
 
 .result-welcome h3 {
-    margin-bottom: 1.5rem;
     color: v.$clr-white;
+    margin-bottom: 1.5rem;
 }
 
 p.bmi-score {
-    margin: .5rem 0 1.5rem;
+    margin-top: .5rem;
     color: v.$clr-white;
+}
+
+.bmi-status-text {
+    margin-top: 1.5rem;
 }
 
 .bmi-weight-range {
     font-weight: 600;
+}
+
+
+/* =====================================
+                TABLET
+======================================== */
+
+@media (min-width: 48rem) {
+
+    // LAYOUT
+    
+    .section-calculator .grid-item {
+        grid-column: 1 / -1;
+    }
+    
+    // INFO
+    
+    .calculator-info h1 {
+        margin: 2.5rem auto 2rem;
+        max-width: 15ch;
+    }
+
+    // CALCULATOR FORM
+
+    .calculator-form {
+        gap: 2rem;
+        margin: 0 var(--page-padding);
+        padding: 2rem;
+    }
+
+    .metric-container {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    // RESULT
+
+    .result-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        border-radius: 15rem 100rem 100rem 15rem;
+    }
+
+    .result-bmi {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        padding-right: 1rem;
+    }
+
+    .bmi-status-text {
+        margin-top: 0;
+    }
+    
 }

@@ -1,5 +1,9 @@
 @use 'variables' as v;
 
+:root {
+    --page-padding: 1.5rem
+}
+
 body { 
     font-size: 1rem;
     font-family: v.$font;
@@ -7,8 +11,6 @@ body {
     line-height: 1.5;
     color: v.$clr-electric-blue;
 }
-
-.hidden { display: none; }
 
 .sr-only {
     position: absolute ;
@@ -25,4 +27,16 @@ body {
     display: grid;
     align-content: start;
     gap: 1.5rem;
+}
+
+@media (min-width: 48rem) {
+    :root {
+        --page-padding: 2.5rem;
+        --grid-padding: calc(var(--page-padding) - .625rem)
+    }
+
+    .grid {
+        grid-template-columns: var(--grid-padding) repeat(12, 1fr) var(--grid-padding);
+        column-gap: .625rem;
+    }
 }

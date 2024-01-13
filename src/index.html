@@ -44,21 +44,22 @@
 
                 <!-- Metric -->
 
-                <fieldset data-type="metric" class="fieldset-metric">
-                    <legend class="metric-legend">Height</legend>
-                    <div class="input-container">
-                        <label for="height-metric">cm</label>
-                        <input type="text" inputmode="numeric" placeholder="0" name="height-metric" id="height-metric">
-                    </div>
-                </fieldset>
-
-                <fieldset data-type="metric" class="fieldset-metric">
-                    <legend class="metric-legend">Weight</legend>
-                    <div class="input-container">
-                        <label for="weight-metric">kg</label>
-                        <input type="text" inputmode="numeric" placeholder="0" name="weight-metric" id="weight-metric">
-                    </div>
-                </fieldset>
+                <div class="metric-container">
+                    <fieldset data-type="metric" class="fieldset-metric">
+                        <legend class="metric-legend">Height</legend>
+                        <div class="input-container">
+                            <label for="height-metric">cm</label>
+                            <input type="text" inputmode="numeric" placeholder="0" name="height-metric" id="height-metric">
+                        </div>
+                    </fieldset>
+                    <fieldset data-type="metric" class="fieldset-metric">
+                        <legend class="metric-legend">Weight</legend>
+                        <div class="input-container">
+                            <label for="weight-metric">kg</label>
+                            <input type="text" inputmode="numeric" placeholder="0" name="weight-metric" id="weight-metric">
+                        </div>
+                    </fieldset>
+                </div>
 
                 <!-- Imperial -->
 
@@ -103,10 +104,10 @@
                     
                     <div class="result-bmi hidden" role="status" aria-live="polite">
                         <div class="bmi-score-container">
-                            <h3>Your BMI is...</h3>
+                            <h3 class="body-m-bold">Your BMI is...</h3>
                             <p class="heading-xl bmi-score" id="bmi-score">Score</p>
                         </div>
-                        <p class="body-sm">
+                        <p class="body-sm bmi-status-text">
                             Your BMI suggests you're <span id="bmi-status"></span>.
                             Your ideal weight is between <span id="bmi-weight-range" class="bmi-weight-range"></span>.
                         </p>
@@ -116,9 +117,10 @@
         </section>
 
         <section class="section-meaning">
-            <div class="meaning-result">
-                <img src="" alt="" id="img-man-eating">
-                <div class="meaning-result-text">
+
+            <div class="meaning-result grid">
+                <img src="" alt="" id="img-man-eating" class="img-man-eating grid-item">
+                <div class="meaning-result-text grid-item">
                     <img src="" alt="" id="curve-left" class="curve-left">
                     <h2 class="heading-l">What your BMI result means</h2>
                     <p>
@@ -132,7 +134,7 @@
                 </div>
             </div>
 
-            <div class="meaning-items">
+            <div class="meaning-items grid">
                 <div class="meaning-item">
                     <img src="" alt="" id="icon-eating">
                     <div class="meaning-item-text">
@@ -166,10 +168,12 @@
                     </div>
                 </div>
             </div>
+
         </section>
 
-        <section class="section-limitations">
-            <div class="limitations-text">
+        <section class="section-limitations grid">
+            
+            <div class="limitations-text grid-item">
                 <h2 class="heading-l">Limitations of BMI</h2>
                 <p>
                     Although BMI is often a practical indicator of healthy weight, it is not suited for
@@ -179,60 +183,59 @@
                 <img src="" alt="" id="curve-right" class="curve-right">
             </div>
 
-            <div class="limitations-cards">
-                <div class="card">
-                    <div class="card-heading-container">
-                        <img src="" alt="" id="icon-gender">
-                        <h3 class="heading-s">Gender</h3>
-                    </div>
-                    <p>
-                        The development and body fat composition of girls and boys vary with age. Consequently,
-                        a child's age and gender are considered when evaluating their BMI.
-                    </p>
+            <div class="limitation-card card1 grid-item">
+                <div class="card-heading-container">
+                    <img src="" alt="" id="icon-gender">
+                    <h3 class="heading-s">Gender</h3>
                 </div>
-                <div class="card">
-                    <div class="card-heading-container">
-                        <img src="" alt="" id="icon-age">
-                        <h3 class="heading-s">Age</h3>
-                    </div>
-                    <p>
-                        In aging individuals, increased body fat and muscle loss may cause BMI to underestimate
-                        body fat content.
-                    </p>
-                </div>
-                <div class="card">
-                    <div class="card-heading-container">
-                        <img src="" alt="" id="icon-muscle">
-                        <h3 class="heading-s">Muscle</h3>
-                    </div>
-                    <p>
-                        BMI may misclassify muscular individuals as overweight or obese, as it doesn't
-                        differentiate muscle from fat.
-                    </p>
-                </div>
-                <div class="card">
-                    <div class="card-heading-container">
-                        <img src="" alt="" id="icon-pregnancy">
-                        <h3 class="heading-s">Pregnancy</h3>
-                    </div>
-                    <p>
-                        Expectant mothers experience weight gain due to their growing baby. Maintaining a
-                        healthy pre-pregnancy BMI is advisable to minimize health risks for both mother
-                        and child.
-                    </p>
-                </div>
-                <div class="card">
-                    <div class="card-heading-container">
-                        <img src="" alt="" id="icon-race">
-                        <h3 class="heading-s">Race</h3>
-                    </div>
-                    <p>
-                        Certain health concerns may affect individuals of some Black and Asian origins at
-                        lower BMIs than others. To learn more, it is advised to discuss this with your
-                        GP or practice nurse.
-                    </p>
-                </div>
+                <p>
+                    The development and body fat composition of girls and boys vary with age. Consequently,
+                    a child's age and gender are considered when evaluating their BMI.
+                </p>
             </div>
+            <div class="limitation-card card2 grid-item">
+                <div class="card-heading-container">
+                    <img src="" alt="" id="icon-age">
+                    <h3 class="heading-s">Age</h3>
+                </div>
+                <p>
+                    In aging individuals, increased body fat and muscle loss may cause BMI to underestimate
+                    body fat content.
+                </p>
+            </div>
+            <div class="limitation-card card3 grid-item">
+                <div class="card-heading-container">
+                    <img src="" alt="" id="icon-muscle">
+                    <h3 class="heading-s">Muscle</h3>
+                </div>
+                <p>
+                    BMI may misclassify muscular individuals as overweight or obese, as it doesn't
+                    differentiate muscle from fat.
+                </p>
+            </div>
+            <div class="limitation-card card4 grid-item">
+                <div class="card-heading-container">
+                    <img src="" alt="" id="icon-pregnancy">
+                    <h3 class="heading-s">Pregnancy</h3>
+                </div>
+                <p>
+                    Expectant mothers experience weight gain due to their growing baby. Maintaining a
+                    healthy pre-pregnancy BMI is advisable to minimize health risks for both mother
+                    and child.
+                </p>
+            </div>
+            <div class="limitation-card card5 grid-item">
+                <div class="card-heading-container">
+                    <img src="" alt="" id="icon-race">
+                    <h3 class="heading-s">Race</h3>
+                </div>
+                <p>
+                    Certain health concerns may affect individuals of some Black and Asian origins at
+                    lower BMIs than others. To learn more, it is advised to discuss this with your
+                    GP or practice nurse.
+                </p>
+            </div>
+
         </section>
 
     </main>

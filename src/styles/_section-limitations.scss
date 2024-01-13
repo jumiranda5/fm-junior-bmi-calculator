@@ -5,7 +5,7 @@
 ======================================== */
 
 .section-limitations {
-    padding: 0 v.$page-padding;
+    padding: 0 var(--page-padding);
     margin-bottom: 4.5rem;
 }
 
@@ -13,28 +13,22 @@
 
 .limitations-text {
     text-align: center;
+    margin-bottom: 3.5rem;
 }
 
 .limitations-text p {
     margin-top: 2rem;
 }
 
-.limitations-cards {
-    display: grid;
-    gap: 1rem;
-    align-content: start;
-    margin-top: 3.5rem;
-}
-
-.limitations-cards p {
-    margin-top: 1rem;
-}
-
-.limitations-cards .card {
+.limitation-card {
     padding: 1.5rem;
     box-shadow: v.$shadow;
-    border-radius: 1.5rem;
+    border-radius: 1rem;
     background-color: v.$clr-white;
+}
+
+.limitation-card p {
+    margin-top: 1rem;
 }
 
 .card-heading-container {
@@ -47,4 +41,44 @@
 .card-heading-container img {
     width: 2rem;
     aspect-ratio: 1 / 1;
+}
+
+
+/* =====================================
+                TABLET
+======================================== */
+
+@media (min-width: 48rem) {
+
+    .section-limitations {
+        margin-bottom: 6rem;
+        padding: 0;
+    }
+
+    .grid.section-limitations {
+        column-gap: 1rem;
+    }
+
+    .grid-item.limitations-text {
+        grid-column: 2 / span 12;
+    }
+
+    .grid-item.card1,
+    .grid-item.card3 {
+        grid-column: 2 / span 6;
+    }
+
+    .grid-item.card2,
+    .grid-item.card4 {
+        grid-column: 8 / span 6;
+    }
+
+    .grid-item.card5 {
+        grid-column: 5 / span 6;
+    }
+
+    .limitation-card {
+        padding: 2rem;
+    }
+
 }
