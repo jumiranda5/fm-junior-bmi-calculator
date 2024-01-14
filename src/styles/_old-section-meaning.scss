@@ -1,0 +1,102 @@
+@use 'variables' as v;
+
+/* =====================================
+                MOBILE
+======================================== */
+
+.section-meaning {
+    margin: 4.5rem 0;
+}
+
+.curve-left { display: none; }
+
+.meaning-result.grid {
+    row-gap: 3rem;
+}
+
+.meaning-result-text {
+    margin: 0 var(--page-padding);
+}
+
+.meaning-result-text h2 {
+    text-wrap: wrap;
+}
+
+.meaning-result-text p {
+    margin-top: 2rem;
+}
+
+.meaning-items.grid {
+    row-gap: 2.5rem;
+    padding: 3.5rem var(--page-padding);
+    margin-top: 4.5rem;
+    background: v.$grad-lighter-blue;
+}
+
+.meaning-item-text {
+    margin-top: 2rem;
+}
+
+.meaning-item-text p {
+    margin-top: 1.5rem;
+}
+
+
+/* =====================================
+                TABLET
+======================================== */
+
+@media (min-width: 48rem) {
+
+    .section-meaning {
+        margin: 6rem 0;
+    }
+
+    .meaning-result.grid {
+        align-items: center;
+    }
+
+    .img-man-eating.grid-item {
+        grid-column: 1 / 7;
+    }
+
+    .meaning-result-text.grid-item {
+        grid-column: 8 / 14;
+    }
+
+    .img-man-eating {
+        height: 25.75rem;
+        object-fit: cover;
+        object-position: right;
+    }
+
+    .meaning-result-text {
+        margin: 0;
+    }
+
+    .meaning-items.grid {
+        padding: 3.75rem 0;
+        margin-top: 6rem;
+    }
+
+    .meaning-item {
+        grid-column: 2 / span 12;
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    .meaning-item-text {
+        margin-top: 0;
+    }
+
+}
+
+
+/* =====================================
+               DESKTOP
+======================================== */
+
+@media (min-width: 64rem) {
+
+}
