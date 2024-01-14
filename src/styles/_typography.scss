@@ -29,6 +29,7 @@
 .body-m-bold {
     font-size: 1rem;
     font-weight: 600;
+    color: v.$clr-gunmetal;
 }
 
 .body-sm {
@@ -38,7 +39,7 @@
 
 // Desktop
 
-@media (min-width: 75rem) {
+@media (min-width: 75em) {
     .heading-xl {
         font-size: 4rem;
     }
