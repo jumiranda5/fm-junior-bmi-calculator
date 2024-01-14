@@ -19,7 +19,7 @@ initWeightInputs();
 // Init measurement radio group => toggle visibility
 function initMeasurementRadioGroup() {
     const radioGroup = document.querySelectorAll('input[type="radio"][name="measurement"]');
-    const metricInputs = document.querySelectorAll('fieldset[data-type="metric"]');
+    const metricInputs = document.querySelectorAll('div[data-type="metric"]');
     const imperialInputs = document.querySelectorAll('fieldset[data-type="imperial"]');
 
     // initial visibilities (metric default)

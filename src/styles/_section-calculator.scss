@@ -38,8 +38,9 @@
     margin: 2rem auto 0;
 }
 
-.calculator-info h1 {
-    margin: 1.5rem 0;
+.calculator-info-text,
+.calculator-info-text p {
+    margin-top: 1.5rem;
 }
 
 
@@ -117,7 +118,7 @@
 
 .result-welcome h3 {
     color: v.$clr-white;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 p.bmi-score {
@@ -148,9 +149,17 @@ p.bmi-score {
     
     // INFO
     
-    .calculator-info h1 {
-        margin: 2.5rem auto 2rem;
+    .calculator-info-text {
+        margin-top: 2.5rem;
+    }
+
+    .calculator-info-text h1 {
         max-width: 15ch;
+        margin: 0 auto;
+    }
+
+    .calculator-info-text p {
+        margin-top: 2rem;
     }
 
     // CALCULATOR FORM
@@ -185,4 +194,64 @@ p.bmi-score {
         margin-top: 0;
     }
     
+}
+
+
+/* =====================================
+               DESKTOP
+======================================== */
+
+@media (min-width: 64rem) {
+
+    // LAYOUT
+
+    .grid.section-calculator {
+        grid-template-rows: 1fr;
+        align-items: start;
+    }
+    
+    .grid-item.calculator-info {
+        display: grid;
+        grid-template-columns: subgrid;
+        grid-column: 1 / span 10;
+        grid-row: 1 / -1;
+    }
+    
+    .grid-item.calculator-form {
+        grid-column: 8 / span 6;
+        grid-row: 1 / -1;
+    }
+
+    // INFO
+
+    .calculator-info {
+        padding: 0 0 12rem;
+        text-align: start;
+        margin-bottom: 2.25rem;
+    }
+    
+    .logo {
+        grid-column-start: 2;
+        width: 4rem;
+        aspect-ratio: 1 / 1;
+        margin-top: 4.5rem;
+    }
+
+    .calculator-info-text {
+        grid-column: 2 / span 5;
+        margin-top: 8.125rem;
+    }
+    
+    .calculator-info-text h1 {
+        max-width: 20ch;
+    }
+
+
+    // FORM
+
+    .calculator-form {
+        margin: 11.25rem 0 0 0;
+    }
+    
+
 }

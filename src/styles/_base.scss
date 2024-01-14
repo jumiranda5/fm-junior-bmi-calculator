@@ -40,3 +40,19 @@ body {
         column-gap: .625rem;
     }
 }
+
+@media (min-width: 64rem) {
+    :root {
+        --page-padding: 1.5rem;
+        --grid-padding: calc(8.75rem - 2rem - 1.5rem);
+    }
+
+    section {
+        margin: 0 1.5rem;
+    }
+
+    .grid {
+        grid-template-columns: var(--grid-padding) repeat(12, 1fr) var(--grid-padding);
+        column-gap: 2rem;
+    }
+}
