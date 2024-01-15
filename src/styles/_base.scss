@@ -40,6 +40,15 @@ body {
         grid-template-columns: var(--grid-padding) repeat(12, 1fr) var(--grid-padding);
         column-gap: var(--grid-gap);
     }
+
+    .grid-item {
+        display: grid;
+        grid-template-columns: subgrid;
+    }
+
+    .grid-item {
+        grid-column: 1 / -1;
+    }
 }
 
 
@@ -50,7 +59,9 @@ body {
         --grid-padding: calc((8.75rem - var(--grid-gap)) - var(--page-padding));
     }
 
-    section {
-        margin: 0 var(--page-padding);
+    main {
+        max-width: 100rem;
+        margin: 0 auto;
+        padding: 0 var(--page-padding);
     }
 }

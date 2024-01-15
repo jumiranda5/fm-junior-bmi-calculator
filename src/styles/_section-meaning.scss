@@ -1,1 +1,146 @@
 @use 'variables' as v;
+
+/* =====================================
+                MOBILE
+======================================== */
+
+.section-meaning {
+    margin: 4.5rem 0;
+}
+
+.curve-left { display: none; }
+
+.meaning-result-text {
+    margin-top: 3rem;
+    padding: 0 var(--page-padding);
+}
+
+.meaning-result-text h2 {
+    text-wrap: wrap;
+}
+
+.meaning-result-text p {
+    margin-top: 2rem;
+}
+
+// meaning items
+
+.meaning-items {
+    display: grid;
+    row-gap: 2.5rem;
+    margin-top: 4.5rem;
+    padding: 3.5rem var(--page-padding);
+    background: v.$grad-lighter-blue;
+}
+
+.meaning-item-text {
+    margin-top: 2rem;
+}
+
+.meaning-item-text p {
+    margin-top: 1.5rem;
+}
+
+
+/* =====================================
+                TABLET
+======================================== */
+
+@media (min-width: 48em) {
+    
+    .section-meaning {
+        margin: 6rem 0;
+    }
+
+    .meaning-result {
+        align-items: center;
+    }
+
+    .img-man-eating {
+        grid-column: 1 / span 6; // subgrid of grid-item
+
+        min-height: 25.75rem;
+        object-fit: cover;
+        object-position: right;
+    }
+
+    .meaning-result-text {
+        grid-column: 8 / 14; // subgrid of grid-item
+
+        margin: 0;
+        padding: 0;
+    }
+
+    // meaning items
+
+    .meaning-items {
+        padding: 3.75rem 0;
+        margin-top: 6rem;
+    }
+
+    .meaning-item {
+        grid-column: 2 / span 12; // subgrid of grid-item
+
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+    }
+
+    .meaning-item-text {
+        margin-top: 0;
+    }
+
+}
+
+
+/* =====================================
+               DESKTOP
+======================================== */
+
+@media (min-width: 75em) {
+
+    .section-meaning {
+        margin: 1rem 0 0;
+    }
+
+    .img-man-eating {
+        grid-column: 2 / span 6; // subgrid of grid-item
+
+        min-height: 33.25rem;
+        margin-top: 3.25rem;
+    }
+
+    .meaning-result-text {
+        grid-column: 9 / 14; // subgrid of grid-item
+    }
+
+    .curve-left { 
+        display: block; 
+        margin-left: auto;
+        margin-bottom: 2.25rem;
+    }
+
+    // meaning items
+
+    .meaning-items {
+        padding: 4.5rem calc(var(--grid-padding) + var(--grid-gap)) 6rem;
+        margin-top: 6rem;
+        border-radius: 2.125rem;
+    }
+
+    .meaning-items.grid-item {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--grid-gap);
+    }
+
+    .meaning-item {
+        grid-column: auto;
+        display: block;
+    }
+
+    .meaning-item-text {
+        margin-top: 2.75rem;
+    }
+    
+
+}
