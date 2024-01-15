@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [todo](https://your-solution-url.com)
-- Live Site URL: [todo](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/bmi-calculator-using-vanilla-js-and-scss-U1MW0b5hcl)
+- Live Site URL: [Github Pages](https://jumiranda5.github.io/fm-junior-bmi-calculator/)
 
 
 ### Useful resources
