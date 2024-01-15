@@ -57,7 +57,7 @@
     }
 
     .img-man-eating {
-        grid-column: 1 / span 6; // subgrid of grid-item
+        grid-column: 1 / span 6; // grid-item subgrid
 
         min-height: 25.75rem;
         object-fit: cover;
@@ -65,7 +65,7 @@
     }
 
     .meaning-result-text {
-        grid-column: 8 / 14; // subgrid of grid-item
+        grid-column: 8 / 14; // grid-item subgrid
 
         margin: 0;
         padding: 0;
