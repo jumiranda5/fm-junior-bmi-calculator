@@ -61,6 +61,7 @@
 .radio-fieldset {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
 }
 
 .radio-container {
@@ -243,7 +244,7 @@ p.bmi-score {
     // INFO
 
     .calculator-info {
-        padding: 0 0 12rem;
+        padding: 0 0 12.5rem;
         text-align: start;
     }
 

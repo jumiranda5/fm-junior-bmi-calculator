@@ -28,7 +28,7 @@
 .meaning-items {
     display: grid;
     row-gap: 2.5rem;
-    margin-top: 4.5rem;
+    margin-top: 2.5rem;
     padding: 3.5rem var(--page-padding);
     background: v.$grad-lighter-blue;
 }
@@ -101,6 +101,11 @@
 
     .section-meaning {
         margin: 1rem 0 0;
+        row-gap: 0;
+    }
+
+    .meaning-result {
+        align-items: start;
     }
 
     .img-man-eating {
@@ -118,6 +123,7 @@
         display: block; 
         margin-left: auto;
         margin-bottom: 2.25rem;
+        margin-right: 1rem;
     }
 
     // meaning items
