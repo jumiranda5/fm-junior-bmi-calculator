@@ -56,5 +56,6 @@ input[type="radio"]:checked::before {
 }
 
 .input-container input:focus {
-    border: 2px solid v.$clr-blue;
+    border: 1px solid v.$clr-blue;
+    box-shadow: 0 0 2px v.$clr-blue;
 }
